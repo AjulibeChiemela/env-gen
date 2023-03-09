@@ -1,0 +1,72 @@
+.env-form {
+  border: 1px solid #aaaaaa;
+  border-radius: 15px;
+  width: fit-content;
+  max-width: 75%;
+  margin: 0 auto;
+  padding: 2rem;
+  .variable-field {
+    margin-bottom: 2.5rem;
+    .form-group {
+      gap: 1.5rem;
+      display: grid;
+      @media screen and (min-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+      }
+      .input-group {
+        display: grid;
+        position: relative;
+
+        label {
+          font-size: 0.875rem;
+          font-weight: 400;
+          color: #aaaaaa;
+          padding: 3px 5px;
+          background-color: #fff;
+          width: fit-content;
+          position: absolute;
+          top: -10px;
+          left: 15px;
+          z-index: 1;
+        }
+        .form-control,
+        input {
+          border: 1px solid #aaaaaa;
+          border-radius: 6px;
+          padding: 1rem 1.5rem;
+          color: #07122e;
+          font-size: 1rem;
+          font-weight: 400;
+          &:focus {
+            outline: none;
+            box-shadow: none;
+            border: 1px solid #07122e;
+          }
+        }
+      }
+    }
+    .info {
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: #aaaaaa;
+    }
+  }
+
+  button {
+    background: #5a9bfe;
+    border: none;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    margin-top: 2rem;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: #fff;
+    &:hover {
+      border: 1px solid #5a9bfe;
+      background: #fff;
+      cursor: pointer;
+      color: #07122e;
+    }
+  }
+}
