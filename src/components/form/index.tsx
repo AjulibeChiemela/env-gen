@@ -7,16 +7,24 @@ const Form = () => {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setInput({
-      ...input,
-      [name]: value,
-    });
+    setInput((prevInput) => ({ ...prevInput, [name]: value }));
   };
 
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // generateEnvFile();
-    console.log(input);
+
+    const envText = Object.entries(input);
+    let newArr = [];
+    for (let i = 0; i < envText.length; i++) {
+      if (i === 0 || i % 2 === 0) {
+        newArr.push(`${envText[i][1]}=${envText[i + 1][1]}`);
+      }
+    }
+    const newArrStr = newArr.join("\n").toString();
+    const blob = new Blob([newArrStr], { type: "text/plain;charset=utf-8" });
+    console.log(blob);
+    console.log(newArrStr);
   };
   return (
     <form onSubmit={handleFormSubmit} className="env-form">
