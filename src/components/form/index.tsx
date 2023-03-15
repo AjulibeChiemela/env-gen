@@ -32,6 +32,15 @@ const Form = () => {
     const newArrStr = newArr.join("\n").toString();
     const blob = new Blob([newArrStr], { type: "text/plain;charset=utf-8" });
     saveAs(blob, "generatedFile.env");
+
+    setInput({
+      V1_name: "",
+      V1_value: "",
+      V2_name: "",
+      V2_value: "",
+      V3_name: "",
+      V3_value: "",
+    });
   };
   return (
     <form onSubmit={handleFormSubmit} className="env-form">
