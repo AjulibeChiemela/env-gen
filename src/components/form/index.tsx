@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import { saveAs } from "file-saver";
 import "./style.scss";
-// import generateEnvFile from "../../logic/generateEnvFile";
 
 const Form = () => {
   const [input, setInput] = useState({});
@@ -12,7 +12,6 @@ const Form = () => {
 
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // generateEnvFile();
 
     const envText = Object.entries(input);
     let newArr = [];
@@ -23,7 +22,7 @@ const Form = () => {
     }
     const newArrStr = newArr.join("\n").toString();
     const blob = new Blob([newArrStr], { type: "text/plain;charset=utf-8" });
-    console.log(blob);
+    saveAs(blob, "generatedFile.env");
     console.log(newArrStr);
   };
   return (
@@ -74,6 +73,33 @@ const Form = () => {
               onChange={handleInputChange}
               className="form-control"
               name="V2_value"
+            />
+          </div>
+        </div>
+        <p className="info">
+          @info...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+          et lectus posuere, fringilla ipsum at, tristique enim. Sed quis mattis
+        </p>
+      </div>
+      <div className="variable-field">
+        <h4>VARIABLE 3</h4>
+        <div className="form-group">
+          <div className="input-group">
+            <label htmlFor="">Name</label>
+            <input
+              type="text"
+              onChange={handleInputChange}
+              className="form-control"
+              name="V3_name"
+            />
+          </div>
+          <div className="input-group">
+            <label htmlFor="">Value</label>
+            <input
+              type="text"
+              onChange={handleInputChange}
+              className="form-control"
+              name="V3_value"
             />
           </div>
         </div>
