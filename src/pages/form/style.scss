@@ -1,77 +1,60 @@
-@import "../variables";
+@import "../../variables";
 
 .env-form {
-  border: 1px solid $grey;
-  border-radius: 15px;
-  width: fit-content;
-  max-width: 75%;
-  margin: 0 auto;
-  padding: 2rem;
-  .variable-field {
-    margin-bottom: 2.5rem;
-    .form-group {
-      gap: 1.5rem;
-      display: grid;
-      @media screen and (min-width: 768px) {
-        grid-template-columns: 1fr 1fr;
-      }
-      .input-group {
-        display: grid;
-        position: relative;
+	border: 1px solid $grey;
+	border-radius: 15px;
+	width: fit-content;
+	max-width: 75%;
+	margin: 0 auto;
+	padding: 2rem;
+	.variable-field {
+		margin-bottom: 2.5rem;
+		.form-group {
+			gap: 1.5rem;
+			display: grid;
+			@media screen and (min-width: 768px) {
+				grid-template-columns: 1fr 1fr;
+			}
+			.input-group {
+				display: grid;
+				position: relative;
 
-        label {
-          font-size: 0.875rem;
-          font-weight: 400;
-          color: $grey;
-          padding: 3px 5px;
-          background-color: white;
-          width: fit-content;
-          position: absolute;
-          top: -10px;
-          left: 15px;
-          z-index: 1;
-        }
-        .form-control,
-        input {
-          border: 1px solid $grey;
-          border-radius: 6px;
-          padding: 1rem 1.5rem;
-          color: $primary;
-          font-size: 1rem;
-          font-weight: 400;
-          &:focus {
-            outline: none;
-            box-shadow: none;
-            border: 1px solid $primary;
-          }
-          &:disabled {
-            background-color: $disabled;
-          }
-        }
-      }
-    }
-    .info {
-      font-size: 0.875rem;
-      font-weight: 400;
-      color: $grey;
-    }
-  }
+				label {
+					font-size: 0.875rem;
+					font-weight: 400;
+					color: $grey;
+					padding: 3px 5px;
+					background-color: white;
+					width: fit-content;
+					position: absolute;
+					top: -10px;
+					left: 15px;
+					z-index: 1;
+				}
+			}
+		}
+		.info {
+			font-size: 0.875rem;
+			font-weight: 400;
+			color: $grey;
+		}
+	}
 
-  button {
-    background: $lightBlue;
-    border: none;
-    width: 100%;
-    padding: 1rem 1.5rem;
-    margin-top: 2rem;
-    border-radius: 6px;
-    font-weight: 500;
-    font-size: 1.25rem;
-    color: white;
-    &:hover {
-      border: 1px solid $lightBlue;
-      background: white;
-      cursor: pointer;
-      color: $primary;
-    }
-  }
+	button {
+		background: $lightBlue;
+		border: none;
+		width: 100%;
+		padding: 1rem 1.5rem;
+		margin-top: 2rem;
+		border-radius: 6px;
+		font-weight: 500;
+		font-size: 1.25rem;
+		color: white;
+		&:hover {
+			border: 1px solid $lightBlue;
+			background: white;
+			cursor: pointer;
+			color: $primary;
+		}
+	}
 }

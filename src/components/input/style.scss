@@ -1,0 +1,19 @@
+@import "../../variables";
+
+.form-control,
+input {
+	border: 1px solid $grey;
+	border-radius: 6px;
+	padding: 1rem 1.5rem;
+	color: $primary;
+	font-size: 1rem;
+	font-weight: 400;
+	&:focus {
+		outline: none;
+		box-shadow: none;
+		border: 1px solid $primary;
+	}
+	&:disabled {
+		background-color: $disabled;
+	}
+}
