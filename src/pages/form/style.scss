@@ -1,5 +1,7 @@
+@import "../variables";
+
 .env-form {
-  border: 1px solid #aaaaaa;
+  border: 1px solid $grey;
   border-radius: 15px;
   width: fit-content;
   max-width: 75%;
@@ -20,9 +22,9 @@
         label {
           font-size: 0.875rem;
           font-weight: 400;
-          color: #aaaaaa;
+          color: $grey;
           padding: 3px 5px;
-          background-color: #fff;
+          background-color: white;
           width: fit-content;
           position: absolute;
           top: -10px;
@@ -31,19 +33,19 @@
         }
         .form-control,
         input {
-          border: 1px solid #aaaaaa;
+          border: 1px solid $grey;
           border-radius: 6px;
           padding: 1rem 1.5rem;
-          color: #07122e;
+          color: $primary;
           font-size: 1rem;
           font-weight: 400;
           &:focus {
             outline: none;
             box-shadow: none;
-            border: 1px solid #07122e;
+            border: 1px solid $primary;
           }
           &:disabled {
-            background-color: #f5f5f5;
+            background-color: $disabled;
           }
         }
       }
@@ -51,12 +53,12 @@
     .info {
       font-size: 0.875rem;
       font-weight: 400;
-      color: #aaaaaa;
+      color: $grey;
     }
   }
 
   button {
-    background: #5a9bfe;
+    background: $lightBlue;
     border: none;
     width: 100%;
     padding: 1rem 1.5rem;
@@ -64,12 +66,12 @@
     border-radius: 6px;
     font-weight: 500;
     font-size: 1.25rem;
-    color: #fff;
+    color: white;
     &:hover {
-      border: 1px solid #5a9bfe;
-      background: #fff;
+      border: 1px solid $lightBlue;
+      background: white;
       cursor: pointer;
-      color: #07122e;
+      color: $primary;
     }
   }
 }

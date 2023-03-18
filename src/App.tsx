@@ -1,13 +1,14 @@
 import React from "react";
-import "./App.scss";
-import Home from "./pages/home";
+import Form from "@src/pages/form";
+import { PagesWrapper } from "@src/layout";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <Home />
-    </div>
+    <PagesWrapper>
+      <h1 className="text-center">Env file generator</h1>
+      <Form />
+    </PagesWrapper>
   );
-}
+};
 
 export default App;
