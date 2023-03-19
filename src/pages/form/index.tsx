@@ -5,18 +5,26 @@ import FormField from "../../components/formField";
 import { useFormSubmit } from "../../hooks/form-submit";
 
 const Form = () => {
-	const { input, setInput, handleInputChange, handleFormSubmit } =
-		useFormSubmit();
+	const { input, handleInputChange, handleFormSubmit } = useFormSubmit();
 
 	console.log(input);
 	return (
-		<form
-			// onSubmit={handleFormSubmit}
-			className="env-form"
-		>
-			<FormField fieldNo="1" />
-			<FormField fieldNo="2" />
-			<FormField fieldNo="3" />
+		<form onSubmit={handleFormSubmit} className="env-form">
+			<FormField
+				fieldNo="1"
+				input={input}
+				handleInputChange={handleInputChange}
+			/>
+			<FormField
+				fieldNo="2"
+				input={input}
+				handleInputChange={handleInputChange}
+			/>
+			<FormField
+				fieldNo="3"
+				input={input}
+				handleInputChange={handleInputChange}
+			/>
 			<button type="submit">Generate</button>
 		</form>
 	);

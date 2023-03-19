@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { saveAs } from "file-saver";
 import { EnvInput } from "../pages/form/interface";
 
@@ -12,14 +12,14 @@ export const useFormSubmit = () => {
 		V3_value: "",
 	});
 
-	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-		const { name, value } = e.target;
-		setInput((prevInput) => ({ ...prevInput, [name]: value }));
-	};
-
-	console.log(input);
-
-	const handleFormSubmit = (e: React.FormEvent) => {
+	const handleInputChange = useCallback(
+		(e: React.ChangeEvent<HTMLInputElement>) => {
+			const { name, value } = e.target;
+			setInput((prevInput) => ({ ...prevInput, [name]: value }));
+		},
+		[]
+	);
+	const handleFormSubmit = useCallback((e: React.FormEvent) => {
 		e.preventDefault();
 
 		const envText = Object.entries(input);
@@ -42,7 +42,7 @@ export const useFormSubmit = () => {
 			V3_name: "",
 			V3_value: "",
 		});
-	};
+	}, []);
 
 	return { input, setInput, handleInputChange, handleFormSubmit };
 };

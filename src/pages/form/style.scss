@@ -7,38 +7,6 @@
 	max-width: 75%;
 	margin: 0 auto;
 	padding: 2rem;
-	.variable-field {
-		margin-bottom: 2.5rem;
-		.form-group {
-			gap: 1.5rem;
-			display: grid;
-			@media screen and (min-width: 768px) {
-				grid-template-columns: 1fr 1fr;
-			}
-			.input-group {
-				display: grid;
-				position: relative;
-
-				label {
-					font-size: 0.875rem;
-					font-weight: 400;
-					color: $grey;
-					padding: 3px 5px;
-					background-color: white;
-					width: fit-content;
-					position: absolute;
-					top: -10px;
-					left: 15px;
-					z-index: 1;
-				}
-			}
-		}
-		.info {
-			font-size: 0.875rem;
-			font-weight: 400;
-			color: $grey;
-		}
-	}
 
 	button {
 		background: $lightBlue;

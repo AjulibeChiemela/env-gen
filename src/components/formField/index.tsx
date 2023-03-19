@@ -1,15 +1,13 @@
 import React from "react";
+import "./style.scss";
+import { EnvInput } from "pages/form/interface";
 import Input from "../input";
-import { useFormSubmit } from "../../hooks/form-submit";
 
-const FormField: React.FC<{ fieldNo: string }> = ({ fieldNo }) => {
-	const { input } = useFormSubmit();
-
-	// const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-	// 	const { name, value } = e.target;
-	// 	setInput((prevInput) => ({ ...prevInput, [name]: value }));
-	// };
-
+const FormField: React.FC<{
+	fieldNo: string;
+	input: EnvInput;
+	handleInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}> = ({ fieldNo, input, handleInputChange }) => {
 	return (
 		<div className="variable-field">
 			<h4>{`VARIABLE ${fieldNo}`}</h4>
@@ -19,16 +17,15 @@ const FormField: React.FC<{ fieldNo: string }> = ({ fieldNo }) => {
 					<Input
 						type="text"
 						name={`V${fieldNo}_name`}
-						// onChange={console.log("okay")}
+						handleInputChange={handleInputChange}
+						disabled={false}
 						// disabled={
 						// 	fieldNo == "1"
 						// 		? false
-						// 		: `input.V${Number(fieldNo) - 1}_name` &&
-						// 		  `input.V${Number(fieldNo) - 1}_value`
+						// 		: input.V1_name && input.V1_value
 						// 		? false
 						// 		: true
 						// }
-						disabled={false}
 					/>
 				</div>
 				<div className="input-group">
@@ -36,16 +33,9 @@ const FormField: React.FC<{ fieldNo: string }> = ({ fieldNo }) => {
 					<Input
 						type="text"
 						name={`V${fieldNo}_value`}
-						// disabled={input.V1_name && input.V1_value ? false : true}
+						handleInputChange={handleInputChange}
 						disabled={false}
 					/>
-					{/* 
-					<input
-						type="text"
-						// onChange={handleInputChange}
-						className="form-control"
-						name="V1_value"
-					/> */}
 				</div>
 			</div>
 			<p className="info">
