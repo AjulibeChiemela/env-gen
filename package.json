@@ -26,7 +26,8 @@
     "check-format": "prettier --check .",
     "check-lint": "eslint . --ext ts --ext tsx --ext js",
     "format": "prettier --write .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "check-types": "tsc --pretty --noEmit"
   },
   "eslintConfig": {
     "extends": [

@@ -1,28 +1,28 @@
 @import "variables";
 
 .env-form {
-	border: 1px solid $grey;
-	border-radius: 15px;
-	width: fit-content;
-	max-width: 75%;
-	margin: 0 auto;
-	padding: 2rem;
+  border: 1px solid $grey;
+  border-radius: 15px;
+  width: fit-content;
+  max-width: 75%;
+  margin: 0 auto;
+  padding: 2rem;
 
-	button {
-		background: $lightBlue;
-		border: none;
-		width: 100%;
-		padding: 1rem 1.5rem;
-		margin-top: 2rem;
-		border-radius: 6px;
-		font-weight: 500;
-		font-size: 1.25rem;
-		color: white;
-		&:hover {
-			border: 1px solid $lightBlue;
-			background: white;
-			cursor: pointer;
-			color: $primary;
-		}
-	}
+  button {
+    background: $lightBlue;
+    border: none;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    margin-top: 2rem;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: white;
+    &:hover {
+      border: 1px solid $lightBlue;
+      background: white;
+      cursor: pointer;
+      color: $primary;
+    }
+  }
 }

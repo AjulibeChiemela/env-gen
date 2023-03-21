@@ -2,20 +2,11 @@ import React from "react";
 import "./style.scss";
 
 const Input: React.FC<{
-	type: string;
-	name: string;
-	disabled: boolean;
-	handleInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-}> = ({ type, name, disabled, handleInputChange }) => {
-	return (
-		<input
-			type={type}
-			onChange={handleInputChange}
-			className="form-control"
-			name={name}
-			disabled={disabled}
-		/>
-	);
+  type: string;
+  name: string;
+  handleInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}> = ({ type, name, handleInputChange }) => {
+  return <input type={type} onChange={handleInputChange} className="form-control" name={name} />;
 };
 
 export default Input;
