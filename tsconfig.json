@@ -16,12 +16,6 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "baseUrl": "src"
-    // "paths": {
-    //   "@src/*": ["src/*"],
-    //   "@pages/*": ["src/pages/*"],
-    //   "@components/*": ["src/components/*"],
-    //   "@layout/*": ["src/layout/*"]
-    // }
   },
   "include": ["src"]
 }
