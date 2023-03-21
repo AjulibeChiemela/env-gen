@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { Spinner } from "../components/spinner";
+import { Spinner } from "components/spinner";
 
 interface IProps {
   children: React.ReactNode;
